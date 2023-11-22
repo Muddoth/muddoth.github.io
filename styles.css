@@ -21,7 +21,7 @@ nav {
     padding: 0.5em;
 }
 
-nav a {
+nav a, a {
     color: #48D1CC;
     text-decoration: none;
 }
