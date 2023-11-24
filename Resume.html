@@ -4,13 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Zoom and Pan</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #image-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #zoomed-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.2s ease-out;
+        }
+    </style>
 </head>
-    <body>
-        <div>
-            <img src="Resume2.jpg" alt="My Resume" style="width:300px; height:400px;" align-items="center">
-        
-        </div>
-    </body>
+<body>
+    <div id="image-container">
+        <img id="zoomed-image" src="Resume2.jpg" alt="Zoomable Image">    
+    </div>
+
+    <script>
+        const imageContainer = document.getElementById('image-container');
+        const zoomedImage = document.getElementById('zoomed-image');
+
+        let scale = 1;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        imageContainer.addEventListener('wheel', (event) => {
+            event.preventDefault();
+
+            const zoomSpeed = 0.1;
+            const minScale = 1;
+            const maxScale = 3;
+
+            scale += event.deltaY * -zoomSpeed;
+            scale = Math.min(Math.max(scale, minScale), maxScale);
+
+            updateTransform();
+        });
+
+        imageContainer.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            const startX = event.clientX;
+            const startY = event.clientY;
+
+            const onMove = (moveEvent) => {
+                moveEvent.preventDefault();
+
+                offsetX += moveEvent.clientX - startX;
+                offsetY += moveEvent.clientY - startY;
+
+                startX = moveEvent.clientX;
+                startY = moveEvent.clientY;
+
+                updateTransform();
+            };
+
+            const onRelease = () => {
+                window.removeEventListener('mousemove', onMove);
+                window.removeEventListener('mouseup', onRelease);
+            };
+
+            window.addEventListener('mousemove', onMove);
+            window.addEventListener('mouseup', onRelease);
+        });
+
+        function updateTransform() {
+            zoomedImage.style.transform = `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`;
+        }
+    </script>
+</body>
 </html>
+
