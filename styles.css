@@ -1,8 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    padding-bottom:20px;
+    padding-bottom: 50px;    
     background-image: url(./Images/StarsBackground.jpeg);
     text-align: center; 
     align-items: center;
@@ -86,10 +84,11 @@ h3 {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .nav-bar {
-    background-color: rgb(168, 168, 168);
+    background-color: lightblue;
     border-radius: 10px;
     display: flex;
     gap: 20px;
@@ -104,7 +103,7 @@ h3 {
 }
 
 .nav-bar a:hover {
-    color: #59f1e5; 
+    color: white; 
 }
 
 a {
@@ -178,11 +177,13 @@ img {
 
 
 label {    
+    color: lightblue;
     margin-right: 10px;
     font-weight: bold;
 }
 
 input {
+    background-color:#ffc0cb;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
