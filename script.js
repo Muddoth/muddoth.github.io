@@ -45,13 +45,10 @@ function isElementInViewport(el) {
     );
 }
 
-function checkVisibility() {
+document.addEventListener('DOMContentLoaded', function () {
+    // This function will be executed when the DOM is fully loaded
     var element = document.getElementById('animated-column');
-    if (isElementInViewport(element)) {
-        element.classList.add('show');
-        window.removeEventListener('scroll', checkVisibility);
-    }
-}
-
-window.addEventListener('scroll', checkVisibility);
-checkVisibility(); // Check on page load
+    
+    // Add the 'show' class to trigger the animation
+    element.classList.add('show');
+});
