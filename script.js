@@ -44,11 +44,3 @@ function isElementInViewport(el) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    // This function will be executed when the DOM is fully loaded
-    var element = document.getElementById('animated-column');
-    
-    // Add the 'show' class to trigger the animation
-    element.classList.add('show');
-});
