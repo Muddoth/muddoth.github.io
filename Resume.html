@@ -18,6 +18,9 @@
             border-radius: 10px;
             margin-top: 20px;
             cursor: pointer;
+            display: flex; /* Use flexbox */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
         }
 
         .resume-row-container:hover img {
@@ -44,7 +47,6 @@
 <body>
 
     <div class="header-container">    
-
         <div class="row-container">
             <div class="column1">
                 <img src="./Images/Project Flutter.png" style="max-width: 100px;">
@@ -58,7 +60,6 @@
                 </div>            
             </div>   
         </div>     
-            
     </div>
 
     <div class="container">
@@ -66,7 +67,7 @@
             <h1>My Resume</h1>
         </div>
         <div class="resume-row-container">
-            <img style="margin:20px auto" src="./Images/Resume3.jpg" alt="My Resume" style="border-radius: 10px;">
+            <img src="./Images/Resume3.jpg" alt="My Resume" style="border-radius: 10px;">
             <button class="download-btn" onclick="downloadImage()">Download</button>
         </div>            
     </div>
