@@ -232,7 +232,7 @@ b{
     body {
         font-family: Arial, sans-serif;
         padding-bottom: 50px;
-        background-image: url(./Images/StarsBackground.png);
+        background-image: url(./Images/stars_bg.png);
         text-align: center;
         display: flex;
         flex-direction: column;
