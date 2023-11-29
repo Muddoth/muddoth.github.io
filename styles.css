@@ -206,6 +206,61 @@ b{
     color: #c2304d;
 }
 
+/* Your regular styles here */
+
+@media only screen and (max-width: 600px) {
+    /* Mobile styles */
+
+    body {
+        padding-bottom: 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .header-container {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 10px; /* Adjusted padding for smaller screens */
+        top: 50px; /* Adjusted top position for smaller screens */
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        gap: 10px; /* Adjusted gap between links for smaller screens */
+    }
+
+    .nav-bar a {
+        padding: 8px 10px; /* Adjusted padding for links on smaller screens */
+    }
+
+    .container {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-top: 10px; /* Adjusted margin-top for smaller screens */
+    }
+
+    .row-container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center; /* Center columns on smaller screens */
+    }
+
+    .column,
+    .column1,
+    .column2 {
+        text-align: center; /* Center text in columns on smaller screens */
+        padding: 15px; /* Adjusted padding for columns on smaller screens */
+    }
+
+    .column2 img {
+        border-radius: 0; /* Remove border-radius for images on smaller screens */
+    }
+
+    .contact-container {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .row_contact {
+        flex-direction: column; /* Stack contact rows vertically on smaller screens */
+        align-items: center; /* Center contact rows on smaller screens */
+    }
+}
+
 
 
 
