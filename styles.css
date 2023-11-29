@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     padding-bottom: 50px;    
-    background-image: url(./Images/stars_bg.jpg);
+    background-image: url(./Images/stars_bg.png);
     text-align: center; 
     align-items: center;
     
@@ -232,7 +232,7 @@ b{
     body {
         font-family: Arial, sans-serif;
         padding-bottom: 50px;
-        background-image: url(./Images/StarsBackground.jpeg);
+        background-image: url(./Images/StarsBackground.png);
         text-align: center;
         display: flex;
         flex-direction: column;
