@@ -1,12 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     padding-bottom: 50px;    
-    background-image: url(./Images/StarsBackground.jpeg);
+    background-image: url(./Images/stars_bg.jpg);
     text-align: center; 
     align-items: center;
     
 }
 
+header {    
+    margin: 20px auto; /* Center the header with auto margin */
+    padding: 10px;
+    max-width: 80%; /* Set maximum width to 80% of the viewport */
+}
 
 h1 {
     margin: 10px;
@@ -48,7 +53,9 @@ h3 {
     justify-content: space-between;
     align-items: center;    
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
+    width:100%;
+    object-fit: fill;
 }
 
 .header-column1{
@@ -59,9 +66,12 @@ h3 {
 }
 
 .header-column2{
+    max-width:600px;
     flex: 1;
     padding: 20px;
     text-align:left;
+    object-fit: cover;
+    margin-right: 20px;
 }
 
 .row-container {
@@ -69,7 +79,7 @@ h3 {
     justify-content: space-between;
     align-items: center;    
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto;    
 }
 
 .container {
@@ -83,15 +93,22 @@ h3 {
     color: white;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin:20px auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the links within the nav */
 }
 
 .nav-bar {
     background-color: lightblue;
     border-radius: 10px;
     display: flex;
-    gap: 20px;
+    gap: 20px;    
+    justify-content: center; 
+    object-fit: contain;
 }
 
 .nav-bar a {
@@ -140,7 +157,7 @@ a:hover {
     width: 100%;
     height: auto;
     border-radius: 10%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 
@@ -211,19 +228,38 @@ b{
 @media only screen and (max-width: 600px) {
     /* Mobile styles */
 
+    
     body {
-        padding-bottom: 20px; /* Adjusted padding for smaller screens */
+        font-family: Arial, sans-serif;
+        padding-bottom: 50px;
+        background-image: url(./Images/StarsBackground.jpeg);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
 
     .header-container {
-        max-width: 100%; /* Full width on smaller screens */
-        padding: 10px; /* Adjusted padding for smaller screens */
+        max-width: 80%;
+        width: 100%; /* Full width on smaller screens */
+        padding: 5px;
+        position: relative; /* Relative position for centering */
         top: 50px; /* Adjusted top position for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        z-index: 1000;
     }
 
     .nav-bar {
         flex-direction: column; /* Stack links vertically on smaller screens */
         gap: 10px; /* Adjusted gap between links for smaller screens */
+        overflow-x: hidden; /* Hide horizontal overflow */
     }
 
     .nav-bar a {
@@ -238,6 +274,7 @@ b{
     .row-container {
         flex-direction: column; /* Stack columns vertically on smaller screens */
         align-items: center; /* Center columns on smaller screens */
+        width:80%;
     }
 
     .column,
@@ -260,7 +297,6 @@ b{
         align-items: center; /* Center contact rows on smaller screens */
     }
 }
-
 
 
 
