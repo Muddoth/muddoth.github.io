@@ -14,12 +14,16 @@
         }     
 
         .resume-row-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
             border-radius: 10px;
             margin-top: 20px;
             cursor: pointer;
         }
+
 
         .resume-row-container:hover img {
             filter: blur(5px);
@@ -67,16 +71,16 @@
             <h1>My Resume</h1>
         </div>
         <div class="resume-row-container">
-            <img src="./Images/Resume3.jpg" alt="My Resume" style="border-radius: 10px; max-width: 100%; max-height: 100%;">
+            <img src="./Images/Resume3.jpg" alt="My Resume" style="border-radius: 10px; max-width: 100%; max-height: 100%; width: 50%;">
             <button class="download-btn" onclick="downloadImage()">Download</button>
         </div>
-            
+                   
     </div>
 
     <script>
         function downloadImage() {
             var link = document.createElement('a');
-            link.href = './Images/Resume3.jpg'; // Replace with the actual path to your image
+            link.href = './Images/Resume3.jpg'; 
             link.download = 'My_Resume.jpg';
             document.body.appendChild(link);
             link.click();
