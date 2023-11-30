@@ -1,16 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <script src="script.js" defer></script>
-
+    <script src="script.js" defer></script>    
     <link rel="stylesheet" href="styles.css">  
-
+    
     <style>
-        .container {                        
-            padding: 20px;            
-            position: absolute;
-            top: 240px;        
-            transform: translate(-50%, 0);                        
-        }    
+        .container{
+            top:750px;
+        }       
         .column1 {
             text-align: left;
         }
@@ -20,9 +20,11 @@
             overflow: hidden;
             cursor: pointer;
         }
+
         .column2:hover img {
             filter: blur(5px);
         }
+
         .visit-btn {
             position: absolute;
             top: 50%;
@@ -34,13 +36,17 @@
             cursor: pointer;
             display: none;
         }
+
         .column2:hover .visit-btn {
             display: block;
         }
     </style>
 </head>
+
 <body>    
+
     <div class="header-container">    
+
         <div class="row-container">
             <div class="header-column1">
                 <img src="./Images/Project Flutter.png" style="max-width: 100px;">
@@ -55,8 +61,9 @@
             </div>   
         </div>     
             
-</div>
-    <div class="container" max-width="100%">
+    </div>
+
+    <div class="container" id="project_mobile">
         <div class="row-container">
             <div class="column1">
                 <h2>1. Blind Chess</h2>
@@ -77,6 +84,7 @@
                 <button class="visit-btn" onclick="window.location.href='https://github.com/Muddoth/BlindChess'">Visit Repository</button>
             </div>
         </div>
+
         <div class="row-container">
             <div class="column1">
                 <h2>2. Scheduler</h2>
@@ -97,6 +105,7 @@
                 <button class="visit-btn" onclick="window.location.href='https://github.com/Muddoth/Scheduler'">Visit Repository</button>
             </div>
         </div>
+
         <div class="row-container">
             <div class="column1">
                 <h2>3. Course Management System</h2>
