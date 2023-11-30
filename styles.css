@@ -1,316 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    padding-bottom: 50px;    
-    background-image: url(./Images/stars_bg.png);
-    text-align: center; 
-    align-items: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     
-}
+    <style>            
+        .container {     
+            top:500px;            
+            text-align: center;
+        }     
 
-header {    
-    margin: 20px auto; /* Center the header with auto margin */
-    padding: 10px;
-    max-width: 80%; /* Set maximum width to 80% of the viewport */
-}
-
-h1 {
-    margin: 10px;
-    text-align: center; /* Center the text */
-    flex-grow: 1; /* Allow the h1 to grow and take available space */
-    background-color: #ffc0cb; /* Light Pink Background */
-    color: black;
-    padding: 5px; /* Add padding for better visibility */
-}
-
-h2 {
-    color: #c2304d; /* #c2304d color for h2 */
-    background-color:lightblue; /* Light Blue Background for h2 */
-}
-
-h3 {
-    color: #c2304d; /* #c2304d color for h3 */
-}
-
-.header-container {    
-    max-width: 80%;
-    width: 80%;
-    padding: 5px;
-    position: absolute;
-    left: 50%;
-    top: 100px;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    border-radius: 15px;
-    color: white;
-    z-index: 1000;
-}
-
-.header-row-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    max-width: 800px;
-    margin: 20px auto;
-    width:100%;
-    object-fit: fill;
-}
-
-.header-column1{
-    flex: 1;
-    text-align: right;
-    margin: 0;
-    padding: 20px;
-}
-
-.header-column2{
-    max-width:600px;
-    flex: 1;
-    padding: 20px;
-    text-align:left;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.row-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    max-width: 800px;
-    margin: 0 auto;    
-}
-
-.container {
-    max-width: 80%;
-    padding: 20px;
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    color: white;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin:20px auto;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-    justify-content: center; /* Center the links within the nav */
-}
-
-.nav-bar {
-    background-color: lightblue;
-    border-radius: 10px;
-    display: flex;
-    gap: 20px;    
-    justify-content: center; 
-    object-fit: contain;
-}
-
-.nav-bar a {
-    white-space: nowrap;
-    color:#c2304d;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 16px;
-}
-
-.nav-bar a:hover {
-    color: white; 
-}
-
-a {
-    text-decoration:underline;
-    color: #59f1e5;
-    margin: 0 15px;    
-}
-
-a:hover {
-    color: #ffffff; 
-}
-
-.column {
-    flex: 1;
-    text-align: left;
-    padding: 50px;
-    
-}
-
-.column1 {
-    flex: 1;
-    text-align: right;
-    margin: 0;
-    padding: 20px;
-}
-
-.column2 {
-    flex: 1;
-    padding: 20px;
-    text-align:left;
-}
-
-.column2 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10%;
-    object-fit: cover;
-}
+        .resume-row-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
 
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+        .resume-row-container:hover img {
+            filter: blur(5px);
+        }
 
+        .download-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);            
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
 
+        .resume-row-container:hover .download-btn {
+            display: block;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="header-container">    
 
-.contact-container {
-    background-color: black;
-    color: aliceblue;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    top: 200px;
-    position: relative;    
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        <div class="row-container">
+            <div class="column1">
+                <img src="./Images/Project Flutter.png" style="max-width: 100px;">
+            </div>
+            <div class="column2">
+                <div class="nav-bar">
+                    <a href="index.html">Home</a>
+                    <a href="AboutMe.html">About Me</a>
+                    <a href="Projects.html">Projects</a>
+                    <a href="ContactMe.html">Contact Me</a>
+                </div>            
+            </div>   
+        </div>     
+            
+    </div>
 
-.row_contact {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
+    <div class="container">
+        <div>
+            <h1>My Resume</h1>
+        </div>
+        <div class="resume-row-container">
+            <img src="./Images/Resume3.jpg" alt="My Resume" style="border-radius: 10px; max-width: 100%; max-height: 100%; width: 50%;">
+            <button class="download-btn" onclick="downloadImage()">Download</button>
+        </div>
+                   
+    </div>
 
-.row_contact:last-child {
-    justify-content: center;
-}
-
-
-label {    
-    color: lightblue;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-input {
-    background-color:#ffc0cb;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-#contact_link{
-        position: relative;
-        bottom: 0;
-        right: 0;
-        margin: 20px;     
-}
-
-button{
-    background-color: #c2304d;
-    color: white;
-}
-
-b{
-    color: #c2304d;
-}
-
-.download-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);            
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-}
-
-/* Your regular styles here */
-
-@media only screen and (max-width: 600px) {
-    /* Mobile styles */
-
-    
-    body {
-        font-family: Arial, sans-serif;
-        padding-bottom: 50px;
-        background-image: url(./Images/stars_bg.png);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    .header-container {
-        max-width: 80%;
-        width: 100%; /* Full width on smaller screens */
-        padding: 5px;
-        position: relative; /* Relative position for centering */
-        top: 50px; /* Adjusted top position for smaller screens */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: black;
-        border-radius: 15px;
-        color: white;
-        z-index: 1000;
-    }
-
-    .nav-bar {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        gap: 10px; /* Adjusted gap between links for smaller screens */
-        overflow-x: hidden; /* Hide horizontal overflow */
-    }
-
-    .nav-bar a {
-        padding: 8px 10px; /* Adjusted padding for links on smaller screens */
-    }
-
-    .container {
-        max-width: 100%; /* Full width on smaller screens */
-        margin-top: 10px; /* Adjusted margin-top for smaller screens */
-    }
-
-    .row-container {
-        flex-direction: column; /* Stack columns vertically on smaller screens */
-        align-items: center; /* Center columns on smaller screens */
-        width:80%;
-    }
-
-    .column,
-    .column1,
-    .column2 {
-        text-align: center; /* Center text in columns on smaller screens */
-        padding: 15px; /* Adjusted padding for columns on smaller screens */
-    }
-
-    .column2 img {
-        border-radius: 0; /* Remove border-radius for images on smaller screens */
-    }
-
-    .contact-container {
-        max-width: 100%; /* Full width on smaller screens */
-    }
-
-    .row_contact {
-        flex-direction: column; /* Stack contact rows vertically on smaller screens */
-        align-items: center; /* Center contact rows on smaller screens */
-    }
-}
-
-
-
-
-
+    <script>
+        function downloadImage() {
+            var link = document.createElement('a');
+            link.href = './Images/Resume3.jpg'; 
+            link.download = 'My_Resume.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
