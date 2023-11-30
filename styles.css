@@ -258,7 +258,8 @@ b{
         max-width: 80%;
         width: 100%; 
         padding: 5px;
-        position: absoulute; 
+        position: absolute;
+    
         top: 40%;        
         transform: translate(-50%, -50%);
         display: flex;
@@ -334,25 +335,26 @@ b{
     }
     
     #aboutme_mobile{
-        top:1450px;
+        top: 1150px;
         width:80%;
     }
     #home_mobile{
-        top:100%;
+        top:800px;
         align-items: center;
     }
     #project_mobile{
-        top:1500px;
+        top: 1400px;
         width:80%;
     }
     #resume_mobile{
         width: 70%;
-        top:100%;
+        top:650px;
 
     }
     #contact_mobile{
-        top:100%;
+        top:500px;
     }
+    
 }
 
 
