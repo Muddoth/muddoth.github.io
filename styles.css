@@ -8,27 +8,28 @@ body {
 }
 
 header {      
-    margin: 0px auto; /* Center the header with auto margin */
+    background-color: black;
+    margin: 0px auto; 
     padding: 10px;
-    max-width: 100%; /* Set maximum width to 80% of the viewport */
+    max-width: 100%;
 }
 
 h1 {
     margin: 10px;
-    text-align: center; /* Center the text */
-    flex-grow: 1; /* Allow the h1 to grow and take available space */
-    background-color: #ffc0cb; /* Light Pink Background */
+    text-align: center; 
+    flex-grow: 1; 
+    background-color: #ffc0cb; 
     color: black;
-    padding: 5px; /* Add padding for better visibility */
+    padding: 5px; 
 }
 
 h2 {
-    color: #c2304d; /* #c2304d color for h2 */
-    background-color:lightblue; /* Light Blue Background for h2 */
+    color: #c2304d; 
+    background-color:lightblue; 
 }
 
 h3 {
-    color: #c2304d; /* #c2304d color for h3 */
+    color: #c2304d; 
 }
 
 .header-container {    
@@ -93,19 +94,20 @@ h3 {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     margin:50px auto;
+    margin-top: 25%;
 }
 
 nav {
     display: flex;
     gap: 20px;
-    justify-content: center; /* Center the links within the nav */
+    justify-content: center; 
 }
 
 .nav-bar {
     background-color: lightblue;
     border-radius: 10px;
     display: flex;
-    gap: 20px;    
+    gap: 20px;        
     justify-content: center; 
     object-fit: contain;
 }
@@ -123,6 +125,7 @@ nav {
 }
 
 a {
+    font-weight: bold;
     text-decoration:underline;
     color: #59f1e5;
     margin: 0 15px;    
@@ -234,12 +237,11 @@ b{
     display: none;
 }
 
-/* Your regular styles here */
+
 
 @media only screen and (max-width: 600px) {
     /* Mobile styles */
 
-    
     body {
         font-family: Arial, sans-serif;
         padding-bottom: 50px;
@@ -254,62 +256,102 @@ b{
 
     .header-container {
         max-width: 80%;
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
         padding: 5px;
-        position: relative; /* Relative position for centering */
-        top: 50px; /* Adjusted top position for smaller screens */
+        position: absoulute; 
+        top: 40%;        
+        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: black;
         border-radius: 15px;
         color: white;
-        z-index: 1000;
+        z-index: 1000;        
+    }
+    .header-column2{
+        max-width: 100%;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
     }
 
     .nav-bar {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        gap: 10px; /* Adjusted gap between links for smaller screens */
-        overflow-x: hidden; /* Hide horizontal overflow */
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden; 
     }
 
     .nav-bar a {
-        padding: 8px 10px; /* Adjusted padding for links on smaller screens */
+        padding: 8px auto;
+        margin: auto;
+        width: 100%; 
+        box-sizing: border-box;
+        text-align: center; 
     }
 
     .container {
-        max-width: 100%; /* Full width on smaller screens */
-        margin-top: 10px; /* Adjusted margin-top for smaller screens */
+        max-width: 100%; 
+        top: 80%; 
+        margin-top: 10px; 
+        position: absolute;
     }
 
     .row-container {
-        flex-direction: column; /* Stack columns vertically on smaller screens */
-        align-items: center; /* Center columns on smaller screens */
-        width:80%;
+        flex-direction: column; 
+        align-items: center; 
+        width:100%;
+        margin: 20px auto;
     }
 
     .column,
     .column1,
     .column2 {
-        text-align: center; /* Center text in columns on smaller screens */
-        padding: 15px; /* Adjusted padding for columns on smaller screens */
+        text-align: center; 
+        padding: 15px; 
+        flex: 1;
     }
 
     .column2 img {
-        border-radius: 0; /* Remove border-radius for images on smaller screens */
+        padding:0;
+        margin:auto;
+        width: 80%;
     }
 
     .contact-container {
-        max-width: 100%; /* Full width on smaller screens */
+        top: 90%;
+        margin-top: 10px;
+        max-width: 100%; 
     }
 
     .row_contact {
-        flex-direction: column; /* Stack contact rows vertically on smaller screens */
-        align-items: center; /* Center contact rows on smaller screens */
+        flex-direction: column; 
+        align-items: center; 
     }
+    
+    #aboutme_mobile{
+        top: 200%;
+        width:80%;
+    }
+    #home_mobile{
+        top:130%;
+        align-items: center;
+    }
+    #project_mobile{
+        top:1450px;
+        width:80%;
+    }
+    #resume_mobile{
+        width: 70%;
+        top:100%;
+
+    }
+    
 }
-
-
 
 
 
