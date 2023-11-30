@@ -334,11 +334,11 @@ b{
     }
     
     #aboutme_mobile{
-        top: 200%;
+        top:1450px;
         width:80%;
     }
     #home_mobile{
-        top:130%;
+        top:100%;
         align-items: center;
     }
     #project_mobile{
@@ -350,7 +350,9 @@ b{
         top:100%;
 
     }
-    
+    #contact_mobile{
+        top:100%;
+    }
 }
 
 
