@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <script src="script.js" defer></script>    
-    <link rel="stylesheet" href="styles.css">  
-    
+    <script src="script.js" defer></script>
     <style>
-        .container{
-            top:750px;
-        }       
+        .column1 {
+            text-align: left;
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">  
+
+    <style>
+@@ -19,6 +15,9 @@
+            top: 240px;        
+            transform: translate(-50%, 0);                        
+        }
         .column1 {
             text-align: left;
         }
@@ -20,11 +23,9 @@
             overflow: hidden;
             cursor: pointer;
         }
-
         .column2:hover img {
             filter: blur(5px);
         }
-
         .visit-btn {
             position: absolute;
             top: 50%;
@@ -36,15 +37,12 @@
             cursor: pointer;
             display: none;
         }
-
         .column2:hover .visit-btn {
             display: block;
         }
     </style>
 </head>
-
 <body>    
-
     <div class="header-container">    
         <div class="row-container">
             <div class="header-column1">
@@ -58,9 +56,10 @@
                     <a href="ContactMe.html">Contact Me</a>
                 </div>            
             </div>   
-        </div>
-
-    <div class="container" id="project_mobile">
+        </div>     
+            
+</div>
+    <div class="container" max-width="100%">
         <div class="row-container">
             <div class="column1">
                 <h2>1. Blind Chess</h2>
@@ -81,7 +80,6 @@
                 <button class="visit-btn" onclick="window.location.href='https://github.com/Muddoth/BlindChess'">Visit Repository</button>
             </div>
         </div>
-
         <div class="row-container">
             <div class="column1">
                 <h2>2. Scheduler</h2>
@@ -102,7 +100,6 @@
                 <button class="visit-btn" onclick="window.location.href='https://github.com/Muddoth/Scheduler'">Visit Repository</button>
             </div>
         </div>
-
         <div class="row-container">
             <div class="column1">
                 <h2>3. Course Management System</h2>
